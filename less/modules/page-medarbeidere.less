@@ -1,0 +1,79 @@
+/* ------------------------------ */
+/*             OM OSS             */
+/* ------------------------------ */
+
+
+.employees-main-title {
+  color: @primary-color;
+  font-family: @primary-font;
+  font-size: 5vw;
+  font-weight: @font-weight-titles;
+  letter-spacing: @letter-spacing-titles;
+}
+
+.employees-container {
+  //border: 1px dashed red;
+  margin-bottom: 46px;
+}
+
+.employees-flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.employees-frame-round {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 42px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+
+
+
+  .employees-crop {
+    border-radius: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+
+      img {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 101%;
+        max-height: 101%;
+        margin: auto;
+        position: absolute;
+        top: -100%;
+        right: -100%;
+        bottom: -100%;
+        left: -100%;
+      }
+  }
+}
+
+.employees-title {
+  color: @primary-color;
+  font-family: @primary-font;
+  font-size: 21pt;
+  font-weight: @font-weight-titles;
+  letter-spacing: @letter-spacing-titles;
+}
+
+.employees-line {
+  background-color:@primary-color;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 12px;
+}
+
+.employees-phone{
+  color: @fourth-color;
+  font-size: 13pt;
+  margin-bottom: 5px;
+}

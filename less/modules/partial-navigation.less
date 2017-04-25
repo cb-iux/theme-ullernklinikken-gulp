@@ -1,0 +1,85 @@
+/* ---------------------------------- */
+/*             NAVIGATION             */
+/* ---------------------------------- */
+
+/* Navbar standard inline styles */
+.navbar-ul {
+  color: @landing-text-color;
+  font-family: @secondary-font;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.navbar-li {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  border-left: 1px solid #bbbbbb;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.navbar-li:first-child {border: none;}
+
+.navbar-li:last-child {padding-right: 0px;}
+
+
+/* Navbar landing styles */
+.landing-navbar-wrapper {
+  color: @landing-text-color;
+  font-family: @secondary-font;
+  position: absolute;
+  right: 138px;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing-wcag-textsize {
+  font-family: @secondary-font;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  margin-top: 50px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  z-index: 60;
+
+  .fa-lg {
+    margin-left: -4px;
+  }
+}
+
+.landing-wcag-textsize-secondary {
+  font-family: @secondary-font;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  margin-top: 31px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  z-index: 60;
+
+  .fa-lg {
+    margin-left: -4px;
+  }
+}
+
+
+
+
+/* Wrapper for secondary navbar */
+.navigation-secondary {
+  background-color: @primary-color;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+}

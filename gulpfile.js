@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var fs = require('fs');
 var sourcemaps = require('gulp-sourcemaps');  // create sourcemaps of files
 var runSequence = require('run-sequence');    // runs sequences in linear order
+var gulpsync = require('gulp-sync')(gulp);    // same as run-sequence
 var clean = require('gulp-clean');            // delete folders and files
 var zip = require('gulp-zip');                // zip files
 var rename = require('gulp-rename');          // change the name of the output file { /dirname/prefix-basename-suffix.extname }
@@ -40,11 +41,12 @@ gulp.task('style-verify', function() {
     .pipe(csslint.formatter())
 });
 
-gulp.task('less', function() {
+gulp.task('less', function(callback) {
   gulp.src('less/master.less')
     .pipe(rename({ suffix: "-min" }))
     .pipe(less())
     .pipe(gulp.dest('assets/css'))
+    .on('end', callback);
 });
 
 gulp.task('minify-css', function() {
@@ -111,6 +113,11 @@ gulp.task('update-files', function(callback) {
     callback
   )
 });
+
+gulp.task('sync', gulpsync.sync([
+  'less',
+  'minify-css'
+]));
 
 
 
