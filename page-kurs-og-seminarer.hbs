@@ -39,7 +39,16 @@
                   </div>
                 </div>
               </div>
+
+
+            {{else}}
+
+                {{#has tag="#ingen_kurs"}}
+                  {{title}}
+                {{/has}}
+                
             {{/has}}
+
         {{/foreach}}
       {{/get}}
 
