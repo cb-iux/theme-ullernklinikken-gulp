@@ -1,8 +1,18 @@
 $(document).ready(function(){
 
+  // ******************************
   // UNDER ARBEID MELDING > FJERNES FØR DEPLOY
   if ($(window).width() < 1100) {
      alert('Visning for mobil og tablet er under arbeid');
+  }
+
+
+
+
+  if ($('.kos-seminar-rectangle').length > 0) {
+    $('.kos-seminar-nopost').hide();
+  } else {
+    $('.kos-seminar-nopost').show();
   }
 
 
@@ -110,5 +120,7 @@ $(document).ready(function(){
            });
            $(this).click();
       }
-   })
+   });
+
+   
 });

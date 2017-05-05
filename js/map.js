@@ -1,5 +1,5 @@
 
-
+setTimeout(initMap, 10);
 
 function initMap() {
 
