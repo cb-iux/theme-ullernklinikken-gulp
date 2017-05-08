@@ -1,4 +1,11 @@
+$(window).on('load', function() {
+   $('.loading-icon').fadeOut(100);
+   $('.loading-screen').fadeOut(300);
+});
+
 $(document).ready(function(){
+
+
 
   // ******************************
   // UNDER ARBEID MELDING > FJERNES FØR DEPLOY
@@ -8,12 +15,6 @@ $(document).ready(function(){
 
 
 
-
-  if ($('.kos-seminar-rectangle').length > 0) {
-    $('.kos-seminar-nopost').hide();
-  } else {
-    $('.kos-seminar-nopost').show();
-  }
 
 
   // BOOTRSTRAP POPOVER
@@ -100,6 +101,14 @@ $(document).ready(function(){
     });
 
 
+  // SEMINAR FJERNER INGEN TILGJENGELIGE KURS MELDING
+    if ($('.kos-seminar-rectangle').length > 0) {
+      $('.kos-seminar-nopost').hide();
+    } else {
+      $('.kos-seminar-nopost').show();
+    }
+
+
   // ADD _TARGET TO LINKS
   $("a[href^=http]").each(function(){
       var excluded = [
@@ -122,5 +131,12 @@ $(document).ready(function(){
       }
    });
 
-   
+
+
+
+
+
+
+
+
 });

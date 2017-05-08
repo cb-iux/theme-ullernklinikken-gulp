@@ -7,9 +7,11 @@
 
 
    {{!-- CSS --}}
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://static.iux.no/assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://static.iux.no/assets/font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="{{asset "css/master-min.css"}}" />
+
+
 
 
   {{!-- Brand icon --}}
@@ -21,6 +23,27 @@
 </head>
 <body class="{{body_class}}">
 
+  <div style="
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    opacity: 1;
+    overflow: hidden;
+  " class="loading-screen">
+  <img
+    src="{{asset "assets/gfx/loading_icon.gif"}}"
+    width="300px;"
+    style="
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+  " class="loading-icon"
+  >
+
+  </div>
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
 
@@ -33,9 +56,9 @@
 
     {{!-- Javascript --}}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://static.iux.no/assets/jquery/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://static.iux.no/assets/bootstrap/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="{{asset "js/all-scripts-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/map-min.js"}}"></script>
