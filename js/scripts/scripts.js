@@ -1,10 +1,20 @@
+
 $(window).on('load', function() {
+
+   // LOADING SCREEN
    $('.loading-icon').fadeOut(100);
    $('.loading-screen').fadeOut(300);
+
+   // BOOTSTRAP SCROLLSPY SCROLL
+   $('body').scrollspy({
+     target: '.bs-docs-sidebar',
+     offset: 120
+   });
 });
 
-$(document).ready(function(){
 
+
+$(document).ready(function(){
 
 
   // ******************************
@@ -24,12 +34,6 @@ $(document).ready(function(){
     e.preventDefault(); return true;
   });
 
-
-  // BOOTSTRAP SCROLLSPY SCROLL
-  $('body').scrollspy({
-    target: '.bs-docs-sidebar',
-    offset: 120
-  });
 
   // BOOTSTRAP SCROLLSPY CLICK HANDLER
   // Add smooth scrolling on all links inside the navbar
