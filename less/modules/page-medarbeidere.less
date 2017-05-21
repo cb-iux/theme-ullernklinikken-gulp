@@ -17,8 +17,13 @@
 }
 
 .employees-flex-row-wrap {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+     -moz-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 
@@ -30,7 +35,11 @@
   margin-bottom: 42px;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+     -moz-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+       -o-transform: translate(-50%);
+          transform: translate(-50%);
 
 
 

@@ -4,8 +4,13 @@
 
 
 .kos-flex-row-wrap {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+     -moz-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .kos-main-title {
@@ -58,10 +63,18 @@
   }
 
   p:last-child {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-flex-flow: column;
+       -moz-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: center;
+       -moz-justify-content: center;
+            justify-content: center;
+    -webkit-align-items: center;
+            align-items: center;
     margin-top: 35px;
 
     a, a:visited {
