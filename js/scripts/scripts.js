@@ -92,6 +92,24 @@ $(document).ready(function(){
     $('body').css('overflow', 'visible');
   });
 
+  // MENU SHOW/HIDE
+  $('.bars-icon').on('click', function() {
+    $('.menu-container').css('right', '0%');
+    $('body').css('overflow', 'hidden');
+  });
+
+  var menuWidth = '-' + $('.menu-container').width() + 'px';
+
+  $(window).resize(function () {
+    menuWidth = '-' + $('.menu-container').width() + 'px';
+    $('.menu-container').css('right', menuWidth);
+  });
+
+  $('.menu-close-btn').on('click', function() {
+    $('.menu-container').css('right', menuWidth);
+    $('body').css('overflow', 'visible');
+  });
+
 
   // HIDE # AT INFO PAGE
     $('.hashtagremove').each(function(){ // Loop through all inputs

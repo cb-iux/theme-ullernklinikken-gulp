@@ -2,6 +2,7 @@
 /*             NAVIGATION             */
 /* ---------------------------------- */
 
+
 /* Navbar standard inline styles */
 .navbar-ul {
   color: @landing-text-color;
@@ -105,4 +106,38 @@
   position: fixed;
   width: 100%;
   z-index: 60;
+}
+
+
+
+@media only screen and (max-width: 1399px) {
+    .landing-navbar {
+        display: none;
+    }
+
+    .navbar-ul {
+      color: @landing-text-color;
+      font-family: @secondary-font;
+      list-style-type: none;
+      padding-top: 100px;
+    }
+
+    .navbar-li {
+      display: block;
+      padding: 0px 10px 45px 40px;
+      border-left: none;
+      font-weight: 100;
+      font-size: 24px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .menu-partial {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
 }
