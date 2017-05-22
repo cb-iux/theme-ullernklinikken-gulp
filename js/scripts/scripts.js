@@ -20,7 +20,7 @@ $(document).ready(function(){
   // ******************************
   // UNDER ARBEID MELDING > FJERNES FØR DEPLOY
   if ($(window).width() < 1100) {
-     alert('Visning for mobil og tablet er under arbeid');
+     //alert('Visning for mobil og tablet er under arbeid');
   }
 
 
@@ -33,6 +33,7 @@ $(document).ready(function(){
   $('#wcag-link').on('click', function(e) {
     e.preventDefault(); return true;
   });
+
 
 
   // BOOTSTRAP SCROLLSPY CLICK HANDLER
@@ -60,6 +61,7 @@ $(document).ready(function(){
 
 
 
+
   // HIDE LARGE MAP CONTACT PAGE
   var $window = $(window),
       $document = $(document),
@@ -81,6 +83,8 @@ $(document).ready(function(){
       }
   });
 
+
+
   // POPUP ORDER BTN
   $('.landing-bottom-right').on( 'click', function(){
     $('.landing-popup-order-wrapper').fadeIn();
@@ -92,23 +96,75 @@ $(document).ready(function(){
     $('body').css('overflow', 'visible');
   });
 
+
+
   // MENU SHOW/HIDE
   $('.bars-icon').on('click', function() {
     $('.menu-container').css('right', '0%');
     $('body').css('overflow', 'hidden');
   });
 
-  var menuWidth = '-' + $('.menu-container').width() + 'px';
+  var winWidth = $(window).width();
 
   $(window).resize(function () {
-    menuWidth = '-' + $('.menu-container').width() + 'px';
-    $('.menu-container').css('right', menuWidth);
+    winWidth = $(window).width();
   });
 
-  $('.menu-close-btn').on('click', function() {
-    $('.menu-container').css('right', menuWidth);
-    $('body').css('overflow', 'visible');
+  if (winWidth > 800) {
+    $('.menu-close-btn').on('click', function() {
+      $('.menu-container').css('right', '-30%');
+      $('body').css('overflow', 'visible');
+    });
+  }
+
+  if (winWidth < 800 && winWidth > 500) {
+    $('.menu-close-btn').on('click', function() {
+      $('.menu-container').css('right', '-50%');
+      $('body').css('overflow', 'visible');
+    });
+  }
+
+  if (winWidth < 500) {
+    $('.menu-close-btn').on('click', function() {
+      $('.menu-container').css('right', '-80%');
+      $('body').css('overflow', 'visible');
+    });
+  }
+
+
+
+
+  // REMOVE BACKGROUND LANDING IMAGE
+
+
+
+  var distance = $('.landing-intro-text-2').offset().top;
+  console.log(distance);
+
+  if ($(window).scrollTop() >= distance) {
+    $('.landing-bottom-right').fadeOut(100);
+    $('.bg-landing').fadeOut(500);
+  } else {
+    $('.bg-landing').fadeIn(500);
+    $('.landing-bottom-right').fadeIn(100);
+  }
+
+  $(window).scroll(function (){
+    console.log($(window).scrollTop());
+
+    if ($(window).scrollTop() >= distance) {
+      $('.landing-bottom-right').fadeOut(100);
+      $('.bg-landing').fadeOut(500);
+    } else {
+      $('.bg-landing').fadeIn(500);
+      $('.landing-bottom-right').fadeIn(100);
+    }
   });
+
+
+
+
+
 
 
   // HIDE # AT INFO PAGE
