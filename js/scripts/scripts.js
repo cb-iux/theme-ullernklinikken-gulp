@@ -14,6 +14,10 @@ $(window).on('load', function() {
 
 
 
+
+
+
+
 $(document).ready(function(){
 
 
@@ -136,8 +140,12 @@ $(document).ready(function(){
 
   // REMOVE BACKGROUND LANDING IMAGE
 
+  var visible = 1;
+  var hidden = 0;
+  //alert($('.landing-intro-text-2').length);
 
-/*
+  if ($('.landing-intro-text-2').length >= visible) {
+
   var distance = $('.landing-intro-text-2').offset().top;
   var windowWidth = $(window).width();
   //console.log(distance);
@@ -155,7 +163,7 @@ $(document).ready(function(){
 
   $(window).scroll(function (){
     //console.log(distance);
-    console.log(windowWidth);
+    //console.log(windowWidth);
 
     if ($(window).scrollTop() >= distance && windowWidth <= 500) {
       $('.landing-bottom-right').fadeOut(100);
@@ -166,7 +174,7 @@ $(document).ready(function(){
     }
   });
 
-*/
+  }
 
 
 
