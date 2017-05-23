@@ -137,11 +137,14 @@ $(document).ready(function(){
   // REMOVE BACKGROUND LANDING IMAGE
 
 
-
+/*
   var distance = $('.landing-intro-text-2').offset().top;
-  console.log(distance);
+  var windowWidth = $(window).width();
+  //console.log(distance);
+  //console.log(windowWidth);
 
-  if ($(window).scrollTop() >= distance) {
+
+  if ($(window).scrollTop() >= distance && windowWidth <= 500) {
     $('.landing-bottom-right').fadeOut(100);
     $('.bg-landing').fadeOut(500);
   } else {
@@ -149,10 +152,12 @@ $(document).ready(function(){
     $('.landing-bottom-right').fadeIn(100);
   }
 
-  $(window).scroll(function (){
-    console.log($(window).scrollTop());
 
-    if ($(window).scrollTop() >= distance) {
+  $(window).scroll(function (){
+    //console.log(distance);
+    console.log(windowWidth);
+
+    if ($(window).scrollTop() >= distance && windowWidth <= 500) {
       $('.landing-bottom-right').fadeOut(100);
       $('.bg-landing').fadeOut(500);
     } else {
@@ -161,7 +166,7 @@ $(document).ready(function(){
     }
   });
 
-
+*/
 
 
 

@@ -229,21 +229,7 @@
 
   <!-- HOME > TEXT 1 TEXT -->
   <div class="row">
-    <div class="col-md-1 resetpadding">
-      <div class="inner margin">
-        <i class="fa fa-file-text-o fa-4x fa-home-readmore"></i>
-        <div class="home-text-readmore">
-          {{#get "posts" limit="all" include="author,tags"}}
-            {{#foreach posts}}
-              {{#has tag="#home-text-readmore"}}
-                  {{content}}
-              {{/has}}
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 resetpadding">
+    <div class="col-md-4 col-md-push-1 resetpadding">
       <div class="inner margin">
         <div class="home-text-ingress">
           {{#get "posts" limit="all" include="author,tags"}}
@@ -256,12 +242,26 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 resetpadding">
+    <div class="col-md-4 col-md-push-1 resetpadding">
       <div class="inner margin">
         <div class="home-text">
           {{#get "posts" limit="all" include="author,tags"}}
             {{#foreach posts}}
               {{#has tag="#home-text"}}
+                  {{content}}
+              {{/has}}
+            {{/foreach}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-md-pull-8 resetpadding">
+      <div class="inner margin">
+        <i class="fa fa-file-text-o fa-4x fa-home-readmore"></i>
+        <div class="home-text-readmore">
+          {{#get "posts" limit="all" include="author,tags"}}
+            {{#foreach posts}}
+              {{#has tag="#home-text-readmore"}}
                   {{content}}
               {{/has}}
             {{/foreach}}
@@ -291,21 +291,7 @@
 
   <!-- HOME > TEXT 2 TEXT -->
   <div class="row  margin-bottom-home-container">
-    <div class="col-md-1 resetpadding">
-      <div class="inner margin">
-        <i class="fa fa-file-text-o fa-4x fa-home-readmore"></i>
-        <div class="home-text-readmore">
-          {{#get "posts" limit="all" include="author,tags"}}
-            {{#foreach posts}}
-              {{#has tag="#home-text-readmore-second"}}
-                  {{content}}
-              {{/has}}
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 resetpadding">
+    <div class="col-md-4 col-md-push-1 resetpadding">
       <div class="inner margin">
         <div class="home-text-ingress">
           {{#get "posts" limit="all" include="author,tags"}}
@@ -318,12 +304,26 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 resetpadding">
+    <div class="col-md-4 col-md-push-1 resetpadding">
       <div class="inner margin">
         <div class="home-text">
           {{#get "posts" limit="all" include="author,tags"}}
             {{#foreach posts}}
               {{#has tag="#home-text-second"}}
+                  {{content}}
+              {{/has}}
+            {{/foreach}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1 col-md-pull-8 resetpadding">
+      <div class="inner margin">
+        <i class="fa fa-file-text-o fa-4x fa-home-readmore"></i>
+        <div class="home-text-readmore">
+          {{#get "posts" limit="all" include="author,tags"}}
+            {{#foreach posts}}
+              {{#has tag="#home-text-readmore-second"}}
                   {{content}}
               {{/has}}
             {{/foreach}}

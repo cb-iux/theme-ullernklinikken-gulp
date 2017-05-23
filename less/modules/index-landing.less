@@ -265,6 +265,8 @@
     //body {display: none;}
 }
 
+// =====================================================================
+
 @media only screen and (max-height: 800px) {
   .landing-logo {
     position: absolute;
@@ -346,11 +348,13 @@
 
 }
 
+// =====================================================================
 
 @media only screen and (max-width: 1200px) {
   .margintop-landing-intro {margin-top: 25vh;}
 }
 
+// =====================================================================
 
 @media only screen and (max-width: 992px) and (min-width: 769px) {
   //.margin {margin: 0px;}
@@ -402,6 +406,7 @@
   }
 }
 
+// =====================================================================
 
 @media only screen and (max-width: 768px) and (min-height: 800px) {
   .landing-logo {left: 40px;}
@@ -452,13 +457,17 @@
   }
 }
 
+// =====================================================================
+
 @media only screen and (max-width: 768px) and (min-width: 501px) {
   .margintop-landing-intro {margin-top: 23vh;}
 }
 
+// =====================================================================
 
-
+// Mobil
 @media only screen and (max-width: 500px) {
+
   .bg-landing {
     position: fixed;
   }
@@ -480,6 +489,7 @@
   .landing-bottom-left {display: none;}
   .landing-bottom-center {display: none;}
 
+  // BESTILLE TIME KNAPP ANIMASJON
   .landing-bottom-right {
     position: relative;
     bottom: inherit;
@@ -487,6 +497,10 @@
     text-align: center;
     width: 70%;
     left: 50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
     transform: translate(-50%,0);
     padding: 20px 0px;
     margin: 60px 0px 0px 0px;
@@ -496,43 +510,149 @@
 
   .landing-bottom-right:hover {
     position: relative;
-    bottom: inherit;
-    right: inherit;
-    -webkit-transform: translate(0px, -15px);
-       -moz-transform: translate(0px, -15px);
-        -ms-transform: translate(0px, -15px);
-         -o-transform: translate(0px, -15px);
-            transform: translate(0px, -15px);
+    bottom: 0px;
+    right: -50%;
+    text-align: center;
+    width: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0px);
+       -moz-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+         -o-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
       color: @white-color;
-      background: @white-color;
-      font-size: 22px;
-      padding: 20px 40px;
+      background: @secondary-color;
+      font-size: 21px;
+      padding: 20px 0px;
       box-shadow: inherit;
+      //margin: 0px;
   }
 
   .landing-bottom-right:active {
     position: relative;
-    bottom: 24px;
-    right: 40px;
-    -webkit-transform: translate(0px, -15px);
-       -moz-transform: translate(0px, -15px);
-        -ms-transform: translate(0px, -15px);
-         -o-transform: translate(0px, -15px);
-            transform: translate(0px, -15px);
+    bottom: 0px;
+    right: -50%;
+    text-align: center;
+    width: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0px);
+       -moz-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+         -o-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
     -webkit-transition: 50ms ease-in-out;
             transition: 50ms ease-in-out;
       color: @white-color;
-      background: @white-color;
+      background: @secondary-color;
       font-size: 21px;
-      padding: 20px 40px;
+      padding: 20px 0px;
       box-shadow: inherit;
   }
+  // =======================
 
-  .margin-container {margin:0px 30px 0px 30px;}
+  .margin-container {margin:0px 15px 0px 15px;}
 
   .margintop-landing-intro {margin-top: 30vh;}
   .landing-intro-title {font-size: 30px;}
-  .landing-intro-text {font-size: 14pt;}
+  .landing-intro-text {font-size: 13pt;}
   .landing-intro-text-2 {margin-top: 40px;}
   .landing-intro-text-2, .landing-intro-text-3 {font-size: 16pt;}
+
+  // BESTILLE TIME KNAPP SKJEMA
+  .landing-popup-order-container {
+    width: 93%;
+    height: 93%;
+    padding: 60px 30px;
+  }
+
+  .landing-popup-order-close_btn {
+    right: 2%;
+    top: 6%;
+
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+
+    svg:hover {
+      width: 20px;
+      height: 20px;
+      right: auto!important;
+      top: auto!important;
+      cursor: pointer;
+    }
+
+    svg:hover line, svg:active line {
+      stroke: @secondary-color;
+    }
+
+    svg:active {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .landing-popup-order-title {
+    font-size: 20px;
+  }
+
+  .landing-popup-order-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  // =======================
+
+
+}
+
+
+// =====================================================================
+
+@media only screen and (max-width: 360px) {
+
+  // BESTILLE TIME KNAPP SKJEMA
+  .landing-popup-order-container {
+    width: 93%;
+    height: 93%;
+    padding: 40px 30px;
+  }
+
+  .landing-popup-order-close_btn {
+    right: 2%;
+    top: 6%;
+
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+
+    svg:hover {
+      width: 20px;
+      height: 20px;
+      right: auto!important;
+      top: auto!important;
+      cursor: pointer;
+    }
+
+    svg:hover line, svg:active line {
+      stroke: @secondary-color;
+    }
+
+    svg:active {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .landing-popup-order-title {
+    font-size: 20px;
+  }
+
+  .landing-popup-order-text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  // =======================
 }
