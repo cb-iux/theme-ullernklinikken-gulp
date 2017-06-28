@@ -38,7 +38,10 @@
   font-weight: @font-weight-titles;
   letter-spacing: @letter-spacing-titles;
   line-height: 36px;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .kos-seminar-line {
@@ -109,6 +112,14 @@
 @media only screen and (max-width: 767px) {
   .margintop-kos-main-title {
     margin-top: 120px;
+  }
+
+  .margin-mobile {
+    margin: 0px 16px;
+  }
+
+  .kos-seminar-rectangle {
+    padding: 30px 25px;
   }
 
   .kos-main-title {

@@ -127,7 +127,10 @@
   font-family: @secondary-font;
   font-size: 15pt;
   font-weight: 300;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 /* LANDING > INTRO TEXT 2 */
@@ -407,6 +410,12 @@
 }
 
 // =====================================================================
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .landing-intro-text {
+    font-size: 13pt;
+  }
+}
 
 @media only screen and (max-width: 768px) and (min-height: 800px) {
   .landing-logo {left: 40px;}
