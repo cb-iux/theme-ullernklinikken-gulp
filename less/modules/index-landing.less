@@ -113,17 +113,25 @@
 }
 
 /* LANDING > INTRO TITLE */
+.lit {
+  height: 100%;
+}
 .landing-intro-title {
+  //border: 1px dashed red;
+  position: absolute;
+  top: 48%;
+  transform: translateY(-60%);
   color: @landing-text-color;
   font-family: @primary-font;
-  font-size: 3.5vw;
+  font-size: 5vw;
   font-weight: @font-weight-titles;
   letter-spacing: @letter-spacing-titles;
+  text-align: center;
 }
 
 /* LANDING > INTRO TEXT */
 .landing-intro-text {
-  color: @landing-text-color;
+  color: grey;
   font-family: @secondary-font;
   font-size: 15pt;
   font-weight: 300;
@@ -135,7 +143,7 @@
 
 /* LANDING > INTRO TEXT 2 */
 .landing-intro-text-2 {
-  color: @landing-text-color;
+  color: grey;
   font-family: @secondary-font;
   font-size: 17pt;
   font-weight: 300;
@@ -143,15 +151,21 @@
 }
 
 .landing-intro-text-3 {
-  color: @landing-text-color;
+  color: grey;
   font-family: @secondary-font;
   font-size: 17pt;
   font-weight: 300;
   margin-bottom: 15px;
 }
 
-.landing-intro-text-3 > p {
-  display: inline;
+.landing-intro-text-3 {
+  .kg-card-markdown {
+    display: inline;
+
+    p {
+      display: inline;
+    }
+  }
 }
 
 

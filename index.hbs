@@ -1,7 +1,7 @@
 {{!< default}}
 
 <!-- LANDING -->
-<div class="bg-landing {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}"></div>
+<div class="bg-landing {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"></div>
 
 <!-- LANDING > POPUP ORDER -->
 <div class="landing-popup-order-wrapper">
@@ -80,9 +80,9 @@
 
 
   <!-- LANDING > INTRO TITLE -->
-  <div class="row margintop-landing-intro">
-    <div class="col-sm-12 col-md-10 col-md-offset-2 resetpadding">
-      <div class="inner margin">
+  <!-- <div class="row margintop-landing-intro"> -->
+    <div class="col-sm-12 col-md-10 col-md-offset-1 resetpadding lit">
+      <div class="inner margin lit">
         <div class="landing-intro-title">
           {{#get "posts" limit="all" include="author,tags"}}
             {{#foreach posts}}
@@ -96,65 +96,9 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 
-  <!-- LANDING > INTRO TEXT -->
-  <div class="row">
-    <div class="col-sm-7 col-md-5 col-md-offset-2 resetpadding">
-      <div class="inner margin">
-        <div class="landing-intro-text">
-          {{#get "posts" limit="all" include="author,tags"}}
-            {{#foreach posts}}
-              {{#has tag="#landing-intro-text"}}
-                <div class="text {{post_class}}">
-                  {{content}}
-                </div>
-              {{/has}}
-            {{/foreach}}
-          {{/get}}
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-5 col-md-5 resetpadding">
-      <div class="inner margin">
-        <div class="landing-intro-text-2">
-          {{#get "posts" limit="all" include="author,tags"}}
-            {{#foreach posts}}
-              {{#has tag="#landing-intro-text-2"}}
-                <div class="text {{post_class}}">
-                  {{content}}
-                </div>
-              {{/has}}
-            {{/foreach}}
-          {{/get}}
-        </div>
-        <div class="landing-intro-text-3">
-          <i class="fa fa-phone-square fa-lg"></i>
-          <p style="margin-left:9px;">
-            {{#get "posts" limit="all" include="author,tags"}}
-              {{#foreach posts}}
-                {{#has tag="#landing-intro-text-telephone"}}
-                    {{content}}
-                {{/has}}
-              {{/foreach}}
-            {{/get}}
-          </p>
-        </div>
-        <div class="landing-intro-text-3">
-          <i class="fa fa-map-marker fa-lg"></i>
-          <p style="margin-left:18px; display:inline;">
-            {{#get "posts" limit="all" include="author,tags"}}
-              {{#foreach posts}}
-                {{#has tag="#landing-intro-text-adress"}}
-                    {{content}}
-                {{/has}}
-              {{/foreach}}
-            {{/get}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- LANDING > BOTTOM ELEMENTS -->
   <div class="row">
@@ -202,6 +146,64 @@
 <!-- HOME > CONTAINER -->
 
 <div class="container-fluid margin-container margin-tablet home-container">
+
+  <!-- LANDING > INTRO TEXT -->
+  <div class="row">
+    <div class="col-sm-7 col-md-5 col-md-offset-2 resetpadding">
+      <div class="inner margin">
+        <div class="landing-intro-text">
+          {{#get "posts" limit="all" include="author,tags"}}
+            {{#foreach posts}}
+              {{#has tag="#landing-intro-text"}}
+                <div class="text {{post_class}}">
+                  {{content}}
+                </div>
+              {{/has}}
+            {{/foreach}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5 col-md-5 resetpadding">
+      <div class="inner margin">
+        <div class="landing-intro-text-2">
+          {{#get "posts" limit="all" include="author,tags"}}
+            {{#foreach posts}}
+              {{#has tag="#landing-intro-text-2"}}
+                <div class="text {{post_class}}">
+                  {{content}}
+                </div>
+              {{/has}}
+            {{/foreach}}
+          {{/get}}
+        </div>
+        <div class="landing-intro-text-3">
+          <i class="fa fa-phone-square fa-lg"></i>
+          <p style="margin-left:9px; display:inline;">
+            {{#get "posts" limit="all" include="author,tags"}}
+              {{#foreach posts}}
+                {{#has tag="#landing-intro-text-telephone"}}
+                    {{content}}
+                {{/has}}
+              {{/foreach}}
+            {{/get}}
+          </p>
+        </div>
+        <div class="landing-intro-text-3">
+          <i class="fa fa-map-marker fa-lg"></i>
+          <p style="margin-left:18px; display:inline;">
+            {{#get "posts" limit="all" include="author,tags"}}
+              {{#foreach posts}}
+                {{#has tag="#landing-intro-text-adress"}}
+                    {{content}}
+                {{/has}}
+              {{/foreach}}
+            {{/get}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- HOME > TEXT 1 TITLE -->
   <div class="row margintop-home-txt-1">
