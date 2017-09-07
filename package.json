@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "IUX AS",
+  "author": {
+    "name": "Ullernklinikken",
+    "email": "cb@iux.no",
+    "url": "https://ghost.org"
+  },
   "license": "UNLICENSED",
   "devDependencies": {
     "fs": "0.0.1-security",
