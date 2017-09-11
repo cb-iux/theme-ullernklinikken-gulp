@@ -144,9 +144,9 @@ $(document).ready(function(){
   var hidden = 0;
   //alert($('.landing-intro-text-2').length);
 
-  if ($('.landing-intro-text-2').length >= visible) {
+  if ($('.landing-intro-title').length >= visible) {
 
-  var distance = $('.landing-intro-text-2').offset().top;
+  var distance = $('.landing-intro-title').offset().top;
   var windowWidth = $(window).width();
   //console.log(distance);
   //console.log(windowWidth);
