@@ -32,9 +32,29 @@
   margin-bottom: 15px;
 }
 
-.kontakt-text-2 > p,
-.kontakt-kollektiv > p {
-  display: inline;
+// .kontakt-text-2 > p,
+// .kontakt-kollektiv > p {
+//   display: inline;
+// }
+
+.kontakt-text-2 {
+  p {
+    display: inline;
+  }
+
+  .kg-card-markdown {
+    display: inline-block;
+  }
+}
+
+.kontakt-kollektiv {
+  p {
+    display: inline;
+  }
+
+  .kg-card-markdown {
+    display: inline-block;
+  }
 }
 
 .kontakt-line {
@@ -285,6 +305,8 @@
 
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .margin-container-kontakt {margin: 0px 80px 0px 80px;}
+
   .kontakt-map {
     display: none;
   }
