@@ -154,9 +154,11 @@ $(document).ready(function(){
 
   if ($(window).scrollTop() >= distance && windowWidth <= 500) {
     $('.landing-bottom-right').fadeOut(100);
-    $('.bg-landing').fadeOut(500);
+    $('.bg-landing').fadeOut(250);
+    $('.bg-background-block').fadeOut(800);
   } else {
     $('.bg-landing').fadeIn(500);
+    $('.bg-background-block').fadeIn(100);
     $('.landing-bottom-right').fadeIn(100);
   }
 
@@ -167,9 +169,11 @@ $(document).ready(function(){
 
     if ($(window).scrollTop() >= distance && windowWidth <= 500) {
       $('.landing-bottom-right').fadeOut(100);
-      $('.bg-landing').fadeOut(500);
+      $('.bg-landing').fadeOut(250);
+      $('.bg-background-block').fadeOut(800);
     } else {
       $('.bg-landing').fadeIn(500);
+      $('.bg-background-block').fadeIn(100);
       $('.landing-bottom-right').fadeIn(100);
     }
   });
