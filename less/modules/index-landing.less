@@ -123,16 +123,48 @@
   height: 100%;
 }
 .landing-intro-title {
-  //border: 1px dashed red;
   position: absolute;
   top: 48%;
   transform: translateY(-60%);
-  color: @landing-text-color;
-  font-family: @primary-font;
-  font-size: 5vw;
-  font-weight: @font-weight-titles;
-  letter-spacing: @letter-spacing-titles;
-  text-align: center;
+
+  .text {
+    color: @landing-text-color;
+    font-family: @primary-font;
+    font-size: 5vw;
+    font-weight: @font-weight-titles;
+    letter-spacing: @letter-spacing-titles;
+    text-align: center;
+  }
+
+  .vikarstilling {
+    text-align: center;
+    font-family: @secondary-font;
+    color: @landing-text-color;
+    display: flex;
+    flex-flow: column;
+
+    .kg-card-markdown {
+      padding: 8px 20px;
+      margin: 5vh auto 0 auto;
+      background: hsla(0, 0%, 20%, 0.6);
+      border: 2px dashed white;
+      border-radius: 5px;
+
+      h5 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 0;
+        a {
+        color: @secondary-color;
+        font-size: 12px;
+        letter-spacing: 1.15px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 /* LANDING > INTRO TEXT */
@@ -493,6 +525,103 @@
 }
 
 // =====================================================================
+// iPad Portrait
+@media only screen and (max-width: 768px) and (min-height: 1024px) {
+  .landing-intro-title {
+    // position: absolute;
+    // top: 48%;
+    // transform: translateY(-60%);
+
+    .text {
+      // color: @landing-text-color;
+      // font-family: @primary-font;
+      font-size: 8vw;
+      // font-weight: @font-weight-titles;
+      // letter-spacing: @letter-spacing-titles;
+      // text-align: center;
+    }
+
+    .vikarstilling {
+      // text-align: center;
+      // font-family: @secondary-font;
+      // color: @landing-text-color;
+      // display: flex;
+      // flex-flow: column;
+
+      .kg-card-markdown {
+        // padding: 8px 20px;
+        // margin: 5vh auto 0 auto;
+        // background: hsla(0, 0%, 20%, 0.6);
+        // border: 2px dashed white;
+        // border-radius: 5px;
+
+        h5 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 0;
+          a {
+          // color: @secondary-color;
+            font-size: 12px!important;
+          // letter-spacing: 1.15px;
+          // text-transform: uppercase;
+          // text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPad PRO Portrait
+@media only screen and (max-width: 1024px) and (min-height: 1366px) {
+  .landing-intro-title {
+    // position: absolute;
+    // top: 48%;
+    // transform: translateY(-60%);
+
+    .text {
+      // color: @landing-text-color;
+      // font-family: @primary-font;
+      font-size: 8vw;
+      // font-weight: @font-weight-titles;
+      // letter-spacing: @letter-spacing-titles;
+      // text-align: center;
+    }
+
+    .vikarstilling {
+      // text-align: center;
+      // font-family: @secondary-font;
+      // color: @landing-text-color;
+      // display: flex;
+      // flex-flow: column;
+
+      .kg-card-markdown {
+        // padding: 8px 20px;
+        // margin: 5vh auto 0 auto;
+        // background: hsla(0, 0%, 20%, 0.6);
+        // border: 2px dashed white;
+        // border-radius: 5px;
+
+        h5 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 0;
+          a {
+          // color: @secondary-color;
+            font-size: 12px!important;
+          // letter-spacing: 1.15px;
+          // text-transform: uppercase;
+          // text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// =====================================================================
 
 // Mobil
 @media only screen and (max-width: 500px) {
@@ -594,10 +723,37 @@
   .margin-container {margin:0px 15px 0px 15px;}
 
   .margintop-landing-intro {margin-top: 30vh;}
-  .landing-intro-title {font-size: 35px; margin-left: -23px;}
   .landing-intro-text {font-size: 13pt; margin-left: 3%;}
   .landing-intro-text-2 {margin-top: 40px;}
   .landing-intro-text-2, .landing-intro-text-3 {font-size: 16pt; margin-left: 3%;}
+
+  .landing-intro-title {
+    margin-left: -23px;
+
+    .text {
+      font-size: 35px;
+    }
+
+    .vikarstilling {
+
+      .kg-card-markdown {
+        max-width: 225px;
+
+        h5 {
+          // font-size: 18px;
+        }
+        p {
+          a {
+          // color: @secondary-color;
+          // font-size: 12px;
+          // letter-spacing: 1.15px;
+          // text-transform: uppercase;
+          // text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 
   // BESTILLE TIME KNAPP SKJEMA
   .landing-popup-order-container {
