@@ -27,8 +27,13 @@ $(document).ready(function(){
      //alert('Visning for mobil og tablet er under arbeid');
   }
 
+  $(document).on('click', 'a[href="#intro"]', function (event) {
+    event.preventDefault();
 
-
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 800);
+  });
 
 
   // BOOTRSTRAP POPOVER
