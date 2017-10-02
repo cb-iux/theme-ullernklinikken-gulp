@@ -140,13 +140,19 @@
     text-align: center;
     font-family: @secondary-font;
     color: @landing-text-color;
-    display: flex;
-    flex-flow: column;
+            display: flex;
+        display: -ms-flex;
+       display: -moz-flex;
+    display: -webkit-flex;
+            flex-flow: column;
+        -ms-flex-flow: column;
+       -moz-flex-flow: column;
+    -webkit-flex-flow: column;
 
     .kg-card-markdown {
       padding: 8px 20px;
       margin: 5vh auto 0 auto;
-      background: hsla(0, 0%, 20%, 0.6);
+      background: hsla(0, 0%, 20%, 0.2);
       border: 2px dashed white;
       border-radius: 5px;
 
@@ -216,9 +222,18 @@
 
 .landing-googlemap-circle-container {
   width: 170px; height: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+          display: flex;
+      display: -ms-flex;
+     display: -moz-flex;
+  display: -webkit-flex;
+          justify-content: center;
+      -ms-justify-content: center;
+     -moz-justify-content: center;
+  -webkit-justify-content: center;
+          align-items: center;
+      -ms-align-items: center;
+     -moz-align-items: center;
+  -webkit-align-items: center;
   overflow: hidden;
   border-radius: 50%;
   opacity: 0.9999999;
@@ -335,8 +350,14 @@
     position: absolute;
     right: 50px;
     z-index: 60;
-    display: flex;
-    justify-content: flex-end;
+            display: flex;
+        display: -ms-flex;
+       display: -moz-flex;
+    display: -webkit-flex;
+            justify-content: flex-end;
+        -ms-justify-content: flex-end;
+       -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
   }
 
   .landing-bottom-left {

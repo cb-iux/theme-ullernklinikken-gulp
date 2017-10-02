@@ -27,6 +27,7 @@ $(document).ready(function(){
      //alert('Visning for mobil og tablet er under arbeid');
   }
 
+  // SMOOTH SCROLLING FROM LANDING TO HOME
   $(document).on('click', 'a[href="#intro"]', function (event) {
     event.preventDefault();
 
@@ -167,11 +168,13 @@ $(document).ready(function(){
   if ($(window).scrollTop() >= distance && windowWidth <= 500) {
     $('.landing-bottom-right').fadeOut(100);
     $('.bg-landing').fadeOut(250);
+    $('.landing-intro-title').fadeOut(250);
     $('.bg-background-block').fadeOut(800);
   } else {
     $('.bg-landing').fadeIn(500);
     $('.bg-background-block').fadeIn(100);
     $('.landing-bottom-right').fadeIn(100);
+    $('.landing-intro-title').fadeIn(100);
   }
 
 
@@ -182,11 +185,13 @@ $(document).ready(function(){
     if ($(window).scrollTop() >= distance && windowWidth <= 500) {
       $('.landing-bottom-right').fadeOut(100);
       $('.bg-landing').fadeOut(250);
+      $('.landing-intro-title').fadeOut(250);
       $('.bg-background-block').fadeOut(800);
     } else {
       $('.bg-landing').fadeIn(500);
       $('.bg-background-block').fadeIn(100);
       $('.landing-bottom-right').fadeIn(100);
+      $('.landing-intro-title').fadeIn(100);
     }
   });
 
